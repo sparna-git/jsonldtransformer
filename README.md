@@ -77,7 +77,7 @@ Run install command:
 5. To run your script simply use:
 
 ```Shell
-'poetry run' python3.10 jsonldtransformer/Cli.py --rules rules/datacube-2-statdcatap.ttl  --frame rules/framing-context.jsonld --data tests/small-test-data/input.ttl --output output.json
+`poetry run` python3.10 jsonldtransformer/Cli.py --rules rules/datacube-2-statdcatap.ttl  --frame rules/framing-context.jsonld --data tests/small-test-data/input.ttl --output output.json
 ```
 
 6. Run ruff
