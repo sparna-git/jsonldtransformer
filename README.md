@@ -4,26 +4,28 @@
 
 1. Linux, macOS, Windows (WSL)
 	
-	'''shell
+'''shell
+
 		curl -sSL https://install.python-poetry.org | python3 -
-	''' 
+	
+ ''' 
 
-	Windows 
+Windows 
 
-	'''shell
-		(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-	'''
+'''shell
+	(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+'''
 
-2. Add Poetry to your PATH
+3. Add Poetry to your PATH
 
-	'''
-		~/Library/Application Support/pypoetry/venv/bin/poetry on MacOS.
-		~/.local/share/pypoetry/venv/bin/poetry on Linux/Unix.
-		%APPDATA%\pypoetry\venv\Scripts\poetry on Windows.
-		$POETRY_HOME/venv/bin/poetry if $POETRY_HOME is set.
-	'''
+'''Shell
+	~/Library/Application Support/pypoetry/venv/bin/poetry on MacOS.
+	~/.local/share/pypoetry/venv/bin/poetry on Linux/Unix.
+	%APPDATA%\pypoetry\venv\Scripts\poetry on Windows.
+	$POETRY_HOME/venv/bin/poetry if $POETRY_HOME is set.
+'''
 
-3. Use Poetry
+4. Use Poetry
 	
 	Once Poetry is installed and in your $PATH, you can execute the following:
 
