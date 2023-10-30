@@ -4,7 +4,7 @@
 
 1. Linux, macOS, Windows (WSL)
 	
-'''shell
+'''
 
 		curl -sSL https://install.python-poetry.org | python3 -
 	
@@ -12,9 +12,7 @@
 
 Windows 
 
-'''shell
 	(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-'''
 
 3. Add Poetry to your PATH
 
