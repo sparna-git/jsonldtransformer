@@ -47,15 +47,15 @@ If you see something like Poetry (version 1.2.0), your install is ready to use!
 4. Created the project setup
 
 ```shell
-poetry new <Project Name>
+poetry new jsonldtransformer
 ```
 
 This will create the <Project Name> directory with the following content:
 	
-	<Project Name>
+	jsonldtransformer
 	├── pyproject.toml
 	├── README.md
-	├── poetry_demo
+	├── jsonldtransformer
 	│   └── __init__.py
 	└── tests
 	    └── __init__.py     	
@@ -63,18 +63,20 @@ This will create the <Project Name> directory with the following content:
 5. Copy all python files to <Project Name> sud-directory
 
 ```Shell
-	<Project Name>
-	├── pyproject.toml
+	jsonldtransformer
+	├── pyproject.toml **
 	├── README.md
-	├── <Project Name>
+	├── jsonldtransformer
 	│   └── __init__.py
-	│   └── File.py [Python file]
-	│   └── File2.py [* Python file]
+	│   └── Cli.py **Python file**
+	│   └── JsonLdTransformer.py **Python file**
 	└── tests
 	    └── __init__.py
 ```
 
-6. Copy pyproject.toml file and install dependencies  
+6. Copy pyproject.toml file and install dependencies
+
+
 ```Shell
   poetry install
 ```
