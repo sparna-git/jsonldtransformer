@@ -1,14 +1,19 @@
 
-
 ## Installation Poetry
+
+## System requirements
+
+Poetry requires Python 3.8+. It is multi-platform and the goal is to make it work equally well on Linux, macOS and Windows.
+
+## Install Poetry
 
 1. Linux, macOS, Windows (WSL)
 	
-'''
+
 
 		curl -sSL https://install.python-poetry.org | python3 -
 	
- ''' 
+ 
 
 Windows 
 
@@ -16,13 +21,14 @@ Windows
 
 2. Add Poetry to your PATH
 
-'''
+ The installer creates a poetry wrapper in a well-known, platform-specific directory:
 
- 	~/Library/Application Support/pypoetry/venv/bin/poetry on MacOS.
- 	~/.local/share/pypoetry/venv/bin/poetry on Linux/Unix.
-  	%APPDATA%\pypoetry\venv\Scripts\poetry on Windows.
-   	$POETRY_HOME/venv/bin/poetry if $POETRY_HOME is set.
-'''
+   	- ~/Library/Application Support/pypoetry/venv/bin/poetry on MacOS.
+ 	- ~/.local/share/pypoetry/venv/bin/poetry on Linux/Unix.
+  	- %APPDATA%\pypoetry\venv\Scripts\poetry on Windows.
+   	- $POETRY_HOME/venv/bin/poetry if $POETRY_HOME is set.
+    
+If this directory is not present in your $PATH, you can add it in order to invoke Poetry as poetry.
 
 4. Use Poetry
 	
@@ -41,13 +47,14 @@ Windows
 
 4. Created the project setup
 
-	'''
+	
 
 		poetry new <Project Name>
-	'''
+	
 
 	This will create the <Project Name> directory with the following content:
 
+	<p>
 	<Project Name>
 	├── pyproject.toml
 	├── README.md
@@ -55,6 +62,8 @@ Windows
 	│   └── __init__.py
 	└── tests
 	    └── __init__.py
+
+     	</p>
 
 5. Copy all python files to <Project Name>/ sud-directory
 
