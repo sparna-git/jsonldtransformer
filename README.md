@@ -1,5 +1,6 @@
+# JSON LD Transformer
 
-## Installation Poetry
+This Python library applies SHACL rules to an input RDFLib Graph, then serializes the output Graph in a clean JSON-LD by applying a [JSON-LD framing](https://www.w3.org/TR/json-ld11-framing/) specification.
 
 ## Prerequisites
 
