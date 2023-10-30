@@ -3,7 +3,7 @@
 
 ## System requirements
 
-Poetry requires Python 3.8+. It is multi-platform and the goal is to make it work equally well on Linux, macOS and Windows.
+Poetry requires Python 3.8+.
 
 ## Install Poetry
 
