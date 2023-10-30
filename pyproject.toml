@@ -1,0 +1,32 @@
+# 1. Install poetry
+# curl -sSL https://install.python-poetry.org | python3 -
+# 2. install deps
+# poetry install
+# 3. run
+# poetry run python3.10 jsonldtransformer/Cli.py --rules rules/datacube-2-statdcatap.ttl  --frame rules/framing-context.jsonld --data tests/small-test-data/input.ttl --output output.json
+#
+# Running ruff :
+# poetry run ruff check .
+
+[tool.poetry]
+name = "JsonLdTransformer"
+version = "0.1.0"
+description = "Converts an input RDF file using SHACL rules, then serializes the result using JSON-LD framing"
+authors = ["INSEE"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+pyld = "^2.0.3"
+pyshacl = "^0.23.0"
+rdflib = "^6.3.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-cov = "*"
+ruff = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

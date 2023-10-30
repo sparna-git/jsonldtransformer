@@ -1,0 +1,8 @@
+
+output.json
+
+poetry.lock
+
+log/
+
+jsonldtransformer/__pycache__/
