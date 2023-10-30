@@ -64,8 +64,8 @@ This will create the jsonldtransformer directory with the following content:
 	    └── __init__.py
 ```
 
-** Copy all python files to jsonldtransformer\jsonldtransformer. **
-** Copy pyproject.toml file and install dependencies **
+4.1 Copy all python files to jsonldtransformer\jsonldtransformer.
+4.2 Copy pyproject.toml file and install dependencies:
 
 	Run install command:
 	
