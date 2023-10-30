@@ -35,14 +35,11 @@ Poetry requires Python 3.8+. It is multi-platform and the goal is to make it wor
 	
 	Once Poetry is installed and in your $PATH, you can execute the following:
 
-	'''
+	
 
 		poetry --version
 
-	'''
-
 	If you see something like Poetry (version 1.2.0), your install is ready to use!
-
 
 ## Usage
 
@@ -55,7 +52,7 @@ Poetry requires Python 3.8+. It is multi-platform and the goal is to make it wor
 
 	This will create the <Project Name> directory with the following content:
 
-	<p>		
+		
 		<Project Name>
 		├── pyproject.toml
 		├── README.md
@@ -63,25 +60,34 @@ Poetry requires Python 3.8+. It is multi-platform and the goal is to make it wor
 		│   └── __init__.py
 		└── tests
 		    └── __init__.py
-     	</p>
+
+     	
 
 5. Copy all python files to <Project Name> sud-directory
 
-	<p>
+
 		<Project Name>
 		├── pyproject.toml
 		├── README.md
 		├── <Project Name>
 		│   └── __init__.py
-		│   └── File.py * Python file
-		│   └── File2.py * Python file
+		│   └── File.py <b>* Python file</b>
+		│   └── File2.py <b>* Python file</b>
 		└── tests
 		    └── __init__.py
-     	</p>
 
-6. Copy pyproject.toml file and update poetry environment 
+6. Copy pyproject.toml file and install dependencies  
 
 	
 
-		poetry install or poetry update
-	
+		poetry install
+
+ ## Using poetry run
+7. To run your script simply use:
+   
+			poetry run python your_script.py.
+
+ 	
+    
+9. 
+   
