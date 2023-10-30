@@ -50,17 +50,7 @@ If you see something like Poetry (version 1.2.0), your install is ready to use!
 poetry new jsonldtransformer
 ```
 
-This will create the <Project Name> directory with the following content:
-	
-	jsonldtransformer
-	├── pyproject.toml
-	├── README.md
-	├── jsonldtransformer
-	│   └── __init__.py
-	└── tests
-	    └── __init__.py     	
-
-5. Copy all python files to <Project Name> sud-directory
+This will create the jsonldtransformer directory with the following content:
 
 ```Shell
 	jsonldtransformer
@@ -74,19 +64,25 @@ This will create the <Project Name> directory with the following content:
 	    └── __init__.py
 ```
 
-6. Copy pyproject.toml file and install dependencies
+- Copy all python files to jsonldtransformer\jsonldtransformer.
+- Copy pyproject.toml file and install dependencies
 
+Run install command:
 
 ```Shell
   poetry install
 ```
 
- ## Using poetry run
-7. To run your script simply use:
+## Using poetry run
+5. To run your script simply use:
 
 ```Shell
-poetry run python your_script.py.
+`poetry run` python3.10 jsonldtransformer/Cli.py --rules rules/datacube-2-statdcatap.ttl  --frame rules/framing-context.jsonld --data tests/small-test-data/input.ttl --output output.json
 ```
 
-8. 
-   
+6. Run ruff
+
+
+```Shell
+poetry run ruff check .
+```
