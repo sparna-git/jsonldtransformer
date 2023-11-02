@@ -44,7 +44,11 @@ data_graph = Graph().parse(...)
 result = transformer.transform(data_graph)
 ```
 
-## Writing SHACL rules
+## How-to configure the transformer
+
+This lib requires 2 input files : a SHACL rules file, and a JSON-LD framing specification
+
+### How to write the SHACL rules
 
 See [this example file](https://github.com/sparna-git/jsonldtransformer/blob/main/rules/datacube-2-statdcatap.ttl) for an example of how to write rules. The important aspects when writing the rules are:
   - Declare instances of `sh:NodeShape` with a `sh:target` targetting the instances of the classes you want to transform.
@@ -88,7 +92,49 @@ this:CreateDataset
 .
 ```
 
+### How to write the JSON-LD framing specification
 
+See [this example file](https://github.com/sparna-git/jsonldtransformer/blob/main/rules/framing-context.jsonld) for an example of JSON-LD framing spec. A JSON-LD framing file is composed of 2 sections : the JSON-LD @context, and the frame specification.
+
+#### The @context
+
+The @context section :
+  - declares prefixes, for example:
+
+```
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "qb": "http://purl.org/linked-data/cube#",
+      "dct":  "http://purl.org/dc/terms/",
+```
+
+  - maps RDF URIs to JSON terms
+
+```
+      "Dataset": "dcat:Dataset",
+      "DimensionProperty": "qb:DimensionProperty",
+      "LanguageProperty": "ngsi-ld:LanguageProperty",
+```
+
+  - specifies how certain keys should behave
+
+```
+      "languageMap": {
+        "@id": "ngsi-ld:languageMap",
+        "@container":"@language"
+      },
+```
+
+This indicates that the property `ngsi-ld:languageMap` will be mapped to the JSON key `languageMap`, using a [JSON-LD language index](https://www.w3.org/TR/json-ld/#language-indexing).
+
+#### The frame specification
+
+The frame shapes how the output JSON structure should look. In the example it simply looks like this:
+
+```
+"@type": [ "Dataset", "DimensionProperty" ]
+```
+
+This simply indicates that the top-level elements should be Dataset and DimensionProperty. The JSON-LD framing processor will then apply the default behavior to these objects, which will nest their properties inside these objects.
 
 ## Development Note
 
