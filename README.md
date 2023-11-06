@@ -20,7 +20,7 @@ This Python library applies [SHACL rules](https://www.w3.org/TR/shacl-af/#rules)
 3. To make a small test, run the following:
 
 ```Shell
-poetry run python3.10 jsonldtransformer/Cli.py --rules rules/datacube-2-statdcatap.ttl  --frame rules/framing-context.jsonld --data tests/small-test-data/input.ttl --output output.json
+poetry run python3 jsonldtransformer/Cli.py --rules rules/datacube-2-statdcatap.ttl  --frame rules/framing-context.jsonld --data tests/small-test-data/input.ttl --output output.json
 ```
 
 ## Python integration
